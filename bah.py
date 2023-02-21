@@ -28,7 +28,7 @@ except Exception as e:
 	print('[[\x1b[1;92m•\x1b[1;97m] [\x1b[1;96mAlvino_adijaya_xy')
 prox=open('.prox.txt','r').read().splitlines()
 for xd in range(10000):
-	a='Mozilla/5.0 (Symbian/3; Series60/'
+	a='Mozilla/5.0 (Linux; Android 12; SCV41) AppleWebKit/537.36 (KHTML, seperti Gecko) SamsungBrowser/20.0 Chrome/106.0.5249.126 Mobile Safari/537.36'
 	b=random.randrange(1, 9)
 	c=random.randrange(1, 9)
 	d='Nokia'
@@ -58,7 +58,7 @@ for xd in range(10000):
 	uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
 	ugen.append(uaku2)
 for x in range(10):
-	a='Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S'
+	a='Mozilla/5.0 (Linux; U; Android 11; id-id; Redmi Note 9 Build/RP1A.200720.011) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.116 Mobile Safari/537.36 XiaoMi/MiuiBrowser/13.6.0-gn'
 	b=random.randrange(100, 9999)
 	c=random.randrange(100, 9999)
 	d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
@@ -126,12 +126,12 @@ def back():
 #------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
 	clear()
-	alvino_xy(f'''\t{asu} ______                                              
-\t|_   _ \                                             
-\t  | |_) | _ .--.  ,--.   ____   ____  .---.  _ .--.  
-\t  |  __'.[ `/'`\]`'_\ : [_   ] [_   ]/ /__\\[ `/'`\] 
-\t _| |__) || |    // | |, .' /_  .' /_| \__., | |     	
-\t|_______/[___]   \'-;__/[_____][_____]'.__.'[___]    	
+	alvino_xy(f'''\t{asu} ______                                             
+/t|_ _ \                                             
+\t | |_) | _ .--. ,--. ____ ____ .---. _ .--.  
+\t | __'.[ `/'`\]`'_\ : [_ ] [_ ]/ /__\\[ `/'`\]
+\t _| |__) || | // | |, .' /_ .' /_| \__., | |     	
+\t|_______/[___] \'-;__/[_____][_____]'.__.'[___]   
 			{m}•{k}•{h}•{sir} Author : Aris_jaya {x}{m}•{k}•{h}•{x}''')
 #--------------------[ BAGIAN-MASUK ]--------------#
 def login():
