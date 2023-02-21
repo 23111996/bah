@@ -1,20 +1,20 @@
-#-----------------[ IMPORT-MODULE ]-------------------#
-import requests,bs4,json,os,sys,random,datetime,time,re
-import urllib3,rich,base64
-from rich.table import Table as me
-from rich.console import Console as sol
-from bs4 import BeautifulSoup as sop
-from concurrent.futures import ThreadPoolExecutor as tred
-from rich.console import Group as gp
-from rich.panel import Panel as nel
-from rich import print as cetak
-from rich.markdown import Markdown as mark
-from rich.columns import Columns as col
-from rich import print as rprint
-from rich import pretty
-from rich.text import Text as tekz
-pretty.install()
-CON=sol()
+#-----------------[MODUL-IMPOR]-------------------#
+ permintaan impor , bs4 , json , os , sys , random , datetime , time , re
+impor  urllib3 , kaya , base64
+dari  kaya . tabel  impor  Tabel  sebagai  saya
+dari  kaya . konsol  impor  Konsol  sebagai  sol
+dari  bs4  impor  BeautifulSoup  sebagai  sop
+dari  bersamaan . impor berjangka  ThreadPoolExecutor sebagai tred   
+dari  kaya . impor konsol  Grup sebagai gp   
+dari  kaya . panel  mengimpor  Panel  sebagai  nel
+dari  cetak impor kaya  seperti cetak   
+dari  kaya . penurunan  harga impor  Penurunan harga  sebagai  tanda
+dari  kaya . kolom  impor  Kolom  sebagai  col
+from  rich  import  print  as  rprint
+dari  import kaya  cantik 
+dari  kaya . impor teks  Teks sebagai tekz   
+cantik . instal ()
+CON = sol ()
 #------------------[ USER-AGENT ]-------------------#
 cantik . instal ()
 CON = sol ()
