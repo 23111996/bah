@@ -1,106 +1,63 @@
-#-----------------[MODUL-IMPOR]-------------------#
- permintaan impor , bs4 , json , os , sys , random , datetime , time , re
-impor  urllib3 , kaya , base64
-dari  kaya . tabel  impor  Tabel  sebagai  saya
-dari  kaya . konsol  impor  Konsol  sebagai  sol
-dari  bs4  impor  BeautifulSoup  sebagai  sop
-dari  bersamaan . impor berjangka  ThreadPoolExecutor sebagai tred   
-dari  kaya . impor konsol  Grup sebagai gp   
-dari  kaya . panel  mengimpor  Panel  sebagai  nel
-dari  cetak impor kaya  seperti cetak   
-dari  kaya . penurunan  harga impor  Penurunan harga  sebagai  tanda
-dari  kaya . kolom  impor  Kolom  sebagai  col
-from  rich  import  print  as  rprint
-dari  import kaya  cantik 
-dari  kaya . impor teks  Teks sebagai tekz   
-cantik . instal ()
-CON = sol ()
+#-----------------[ IMPORT-MODULE ]-------------------#
+import requests,bs4,json,os,sys,random,datetime,time,re
+import urllib3,rich,base64
+from rich.table import Table as me
+from rich.console import Console as sol
+from bs4 import BeautifulSoup as sop
+from concurrent.futures import ThreadPoolExecutor as tred
+from rich.console import Group as gp
+from rich.panel import Panel as nel
+from rich import print as cetak
+from rich.markdown import Markdown as mark
+from rich.columns import Columns as col
+from rich import print as rprint
+from rich import pretty
+from rich.text import Text as tekz
+pretty.install()
+CON=sol()
 #------------------[ USER-AGENT ]-------------------#
-cantik . instal ()
-CON = sol ()
-ugen3 = []
-ugen2 = []
-ugen = []
-kokbrut = []
-ses = permintaan . Sesi ()
-prinsipp = []
-dari  kaya . konsol  impor  Konsol
-dari  kaya . kolom  impor  Kolom
-wa  =  Konsol ()
-coba :
-	prox =  permintaan . dapatkan ( "https://api.proxyscrape.com/?request=displayproxies&protocol=socks5&timeout=10000&country=all&ssl=all&anonymity=all" ). teks
-	buka ( '.proxy.txt' , 'w' ). tulis ( proksi )
-kecuali  Pengecualian  sebagai  e :
-    keluar ( e )
-untuk  xd  dalam  rentang ( 10000 ):
-	a = 'Mozilla/5.0 (Linux; Android'
-	b = acak . pilihan ([ '5.0' , '6.0' , '7.0' , '8.1.0' , '9' , '10' , '11' , '12' ])
-	c = acak . pilihan ([ 'SAMSUNG GT-I9506/XXUDOE4 Build/LRX22C' ])
-	d = acak . pilihan ([ 'A' , 'B' , 'C' , 'D' , 'E' , 'F' , 'G' , 'H' , 'I' , 'J' , 'K' , ' L' , 'M' , 'N' , 'O' , 'P' , 'Q' , 'R' , 'S' , 'T' , 'U' ,, 'Z' ])
-	e = acak . rentang acak ( 1 , 999 )
-	f = acak . pilihan ([ 'A' , 'B' , 'C' , 'D' , 'E' , 'F' , 'G' , 'H' , 'I' , 'J' , 'K' , ' L' , 'M' , 'N' , 'O' , 'P' , 'Q' , 'R' , 'S' , 'T' , 'U' ,, 'Z' ])
-	g = 'AppleWebKit/537.36 (KHTML, seperti Gecko) SamsungBrowser/6.4 Chrome/56.0.2924.87'
-	h = acak . rentang acak ( 80 , 103 )
-	saya = '0'
-	j = acak . rentang acak ( 4200 , 4900 )
-	k = acak . rentang acak ( 40 , 150 )
-	l = 'Safari Seluler/537.36'
-	uaku = f' { a }  { b } ; { c } { d } { e } { f } ) { g } { h } . { saya } . { j } . { k }  { l } '
-	ugen2 . tambahkan ( uaku )
-
-	
-	aa = 'Mozilla/5.0 (Linux; Android'
-	b = acak . pilihan ([ '5.0' , '6.0' , '7.0' , '8.1.0' , '9' , '10' , '11' , '12' ])
-	c = acak . pilihan ([ 'SM-G570M Build/NRD90M; wv)' ])
-	d = acak . pilihan ([ 'A' , 'B' , 'C' , 'D' , 'E' , 'F' , 'G' , 'H' , 'I' , 'J' , 'K' , ' L' , 'M' , 'N' , 'O' , 'P' , 'Q' , 'R' , 'S' , 'T' , 'U' ,, 'Z' ])
-	e = acak . rentang acak ( 1 , 999 )
-	f = acak . pilihan ([ 'A' , 'B' , 'C' , 'D' , 'E' , 'F' , 'G' , 'H' , 'I' , 'J' , 'K' , ' L' , 'M' , 'N' , 'O' , 'P' , 'Q' , 'R' , 'S' , 'T' , 'U' ,, 'Z' ])
-	g = 'AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/'
-	h = acak . rentang acak ( 80 , 103 )
-	saya = '0'
-	j = acak . rentang acak ( 4200 , 4900 )
-	k = acak . rentang acak ( 40 , 150 )
-	l = 'Safari Seluler/537.36 [FB_IAB/FB4A;FBAV/192.0.0.34.85;]'
-	uaku2 = f' { aa }  { b } ; { c } { d } { e } { f } ) { g } { h } . { saya } . { j } . { k }  { l } '
-	ugen . tambahkan ( uaku2 )
-untuk  x  dalam  rentang ( 10 ):
-	a = 'Mozilla/5.0 (Linux; Android 11;'
-	b = acak . rentang acak ( 100 , 9999 )
-	c = acak . rentang acak ( 100 , 9999 )
-	d = acak . pilihan ([ 'A' , 'B' , 'C' , 'D' , 'E' , 'F' , 'G' , 'H' , 'I' , 'J' , 'K' , ' L' , 'M' , 'N' , 'O' , 'P' , 'Q' , 'R' , 'S' , 'T' , 'U' ,, 'Z' ])
-	e = acak . pilihan ([ 'A' , 'B' , 'C' , 'D' , 'E' , 'F' , 'G' , 'H' , 'I' , 'J' , 'K' , ' L' , 'M' , 'N' , 'O' , 'P' , 'Q' , 'R' , 'S' , 'T' , 'U' ,, 'Z' ])
-	f = acak . pilihan ([ 'A' , 'B' , 'C' , 'D' , 'E' , 'F' , 'G' , 'H' , 'I' , 'J' , 'K' , ' L' , 'M' , 'N' , 'O' , 'P' , 'Q' , 'R' , 'S' , 'T' , 'U' ,, 'Z' ])
-	g = acak . pilihan ([ 'A' , 'B' , 'C' , 'D' , 'E' , 'F' , 'G' , 'H' , 'I' , 'J' , 'K' , ' L' , 'M' , 'N' , 'O' , 'P' , 'Q' , 'R' , 'S' , 'T' , 'U' ,, 'Z' ])
-	h = acak . rentang acak ( 1 , 9 )
-	i = 'RMX3171) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/'
-	j = acak . rentang acak ( 1 , 9 )
-	k = acak . rentang acak ( 1 , 9 )
-	l = 'Safari Seluler/537.36'
-	uak = f' { a } { b } / { c } { d } { e } { f } { g } { h } { i } { j } . { k }  { l } '
-	ugen . tambahkan ( uak )
-def  uaku ():
-	coba :
-		ua = buka ( 'bbnew.txt' , 'r' ). baca (). garis pemisah ()
-		untuk  ub  di  ua :
-			ugen . tambahkan ( ub )
-	kecuali :
-		a = permintaan . dapatkan ( 'https://github.com/EC-1709/a/blob/main/bbnew.txt' ). teks
-		ua = buka ( '.bbnew.txt' , 'w' )
-		aa = kembali . findall ( 'baris">(.*?)<' , str ( a ))
-		untuk  un  di  aa :
-			ua . tulis ( un + ' \n ' )
-		ua = buka ( '.bbnew.txt' , 'r' ). baca (). garis pemisah ()
-u  =  acak . pilihan ([ 'Mozilla/5.0 (Linux; Android 7.1.2; Redmi 4A) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/97.0.4692.87 Mobile Safari/537.36' ,
-'Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Mobile Safari/537.36' ,
-'Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36' ,
-'Mozilla/5.0 (Linux; Android 6.0; iCherry C233 Build/MRA58K) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36' ,
-'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1' ,
-'Mozilla/5.0 (kompatibel; Googlebot/2.1; +http://www.google.com/bot.html)' ,
-'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT ;FBAV/239.0.0.10.109;]' ,
-'Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, seperti Gecko) Versi/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","Mozilla/ 5.0 (Linux; Android 4.1.2; Nokia_X Build/JZO54K) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0,gzip(gfe)' ,
-'Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 10; M2006C3MG) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36' ,
-'Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36' ] )
-
+	'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	g=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	h=random.randrange(1, 9)
+	i='RMX3171) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+	j=random.randrange(1, 9)
+	k=random.randrange(1, 9)
+	l='Mobile Safari/537.36'
+	uak=f'{a}{b}/{c}{d}{e}{f}{g}{h}{i}{j}.{k} {l}'
+	ugen.append(uak)
+def uaku():
+	try:
+		ua=open('bbnew.txt','r').read().splitlines()
+		for ub in ua : 
+			ugen.append(ub)
+	except:
+		a=requests.get('https://github.com/EC-1709/a/blob/main/bbnew.txt').text
+		ua=open('.bbnew.txt','w')
+		aa=re.findall('line">(.*?)<',str(a))
+		for un in aa:
+			ua.write(un+'\n')
+		
+		ua=open('bbnew.txt','r').read().splitlines()
+		for ub in ua : 
+			ugen.append(ub)
+	except:
+		a=requests.get('https://github.com/EC-1709/a/blob/main/bbnew.txt').text
+		ua=open('.bbnew.txt','w')
+		aa=re.findall('line">(.*?)<',str(a))
+		for un in aa:
+			ua.write(un+'\n')
+		ua=open('.bbnew.txt','r').read().splitlines()
+ua = random.choice(['Mozilla/5.0 (Linux; Android 7.1.2; Redmi 4A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.87 Mobile Safari/537.36',
+'Mozilla/5.0 (Linux; Android 10; SM-G996U Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36',
+'Mozilla/5.0 (Linux; Android 10; SM-G980F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36',
+'Mozilla/5.0 (Linux; Android 6.0; iCherry C233 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36',
+'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]',
+'Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 4.1.2; Nokia_X Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0,gzip(gfe)',
+'Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 10; M2006C3MG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36',
+'Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36'])
 #------------[ INDICATION ]---------------#
 id,id2,loop,ok,cp,akun,oprek,method,lisensiku,taplikasi,tokenku,uid,lisensikuni= [],[],0,0,0,[],[],[],[],[],[],[],[]
 cokbrut=[]
@@ -144,13 +101,13 @@ def back():
 #------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
 	clear()
-	alvino_xy(f'''\t{asu} ______                                             
-/t|_ _ \                                             
-\t | |_) | _ .--. ,--. ____ ____ .---. _ .--.  
-\t | __'.[ `/'`\]`'_\ : [_ ] [_ ]/ /__\\[ `/'`\]
-\t _| |__) || | // | |, .' /_ .' /_| \__., | |     	
-\t|_______/[___] \'-;__/[_____][_____]'.__.'[___]   
-			{m}•{k}•{h}•{sir} Author : Aris_jaya {x}{m}•{k}•{h}•{x}''')
+	alvino_xy(f'''\t{asu} ______                                              
+\t|_   _ \                                             
+\t  | |_) | _ .--.  ,--.   ____   ____  .---.  _ .--.  
+\t  |  __'.[ `/'`\]`'_\ : [_   ] [_   ]/ /__\\[ `/'`\] 
+\t _| |__) || |    // | |, .' /_  .' /_| \__., | |     	
+\t|_______/[___]   \'-;__/[_____][_____]'.__.'[___]    	
+			{m}•{k}•{h}•{sir} Author : Alvino_Adijaya {x}{m}•{k}•{h}•{x}''')
 #--------------------[ BAGIAN-MASUK ]--------------#
 def login():
 	try:
@@ -241,8 +198,8 @@ def error():
 	back()
 #-----------------[ HASIL-CRACK ]-----------------#
 def result():
-	print('>> Hasil cp Anda ')
-	print('>> Hasil ok Anda ')
+	print('>> Hasil OK Anda ')
+	print('>> Hasil CP Anda ')
 	print('>> Kembali	')
 	kz = input('\n>> Pilih : ')
 	if kz in ['1','01']:
@@ -345,7 +302,7 @@ def dump_massal():
 	except IOError:
 		exit()
 	try:
-		jum = int(input('>> Mau Berapa Target kisana ? : '))
+		jum = int(input('>> Mau Berapa Target Njing ? : '))
 	except ValueError:
 		print('>> Masukkan Angka Anjing, Malah Huruff ')
 		exit()
